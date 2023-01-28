@@ -7,9 +7,11 @@
 - npm install
 - npm run dev (for develop) Or npm run build (for production)
 - rename .env.example to .env
-- enter your mailbox Specifications
+- enter your mailbox Specifications (Of course, I configured it for testing)
 - php artisan migrate ( If the database is not created automatically, create your database before migrating and enter it in the .env file  )
-- composer update and run php artisan serve
+- composer update
+- php artisan optimize:clear
+- php artisan serve
 
 ## How it works
 
@@ -21,3 +23,8 @@ and you can see all countries with Population and Country Name.
 - If you click on any column, you will sort it.
 - search is live but not work Grmany or Grmny for Germany.
 - You can run php artisan test to test the platform, but this test is related to the package and I did not write it.
+
+## Require
+
+- php = ^8.0
+- npm = ^8.5.1
