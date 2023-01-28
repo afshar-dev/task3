@@ -1,3 +1,8 @@
+@extends('layouts.app')
+@section('content')
+    <div class="container-fluid bg-secondary">
+        <div class="container py-5">
+            <div class="d-flex justify-content-center m-5 p-5">
 <x-guest-layout>
     <form method="POST" action="{{ route('password.store') }}">
         @csrf
@@ -37,3 +42,7 @@
         </div>
     </form>
 </x-guest-layout>
+            </div>
+        </div>
+    </div>
+@endsection

@@ -1,9 +1,7 @@
 @extends('layouts.app')
 @section('content')
-
     <form method="POST" action="{{ route('logout') }}">
         @csrf
-
         <x-dropdown-link :href="route('logout')"
                          onclick="event.preventDefault();
                                                 this.closest('form').submit();">
@@ -17,6 +15,8 @@
                 registration.') }}
             </div>
         @endif
+        <p> Please Check Your Email to Verify Email</p>
+        <p>your Email is= {{auth()->user()->email}}</p>
         <form method="POST" action="{{ route('verification.send') }}">
             @csrf
             <div>
